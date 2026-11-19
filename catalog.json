@@ -1,0 +1,162 @@
+{
+  "$schema": "./catalog.schema.json",
+  "schema_version": "1.0",
+  "environments": [
+    {
+      "id": "iop",
+      "name": "IOP",
+      "repository": "https://github.com/EnvFoundry/IOP",
+      "origin_repository": "https://github.com/Cherish0925/IOP",
+      "reviewed_revision": "d8f3f61130b5b450afe508603cf0cb1a9d6fd15f",
+      "summary": "Physical instruments and experimental platforms.",
+      "interfaces": [
+        "python",
+        "typescript",
+        "cli",
+        "http",
+        "mcp"
+      ],
+      "installation": {
+        "python": ">=3.10",
+        "extras": [
+          "agent"
+        ],
+        "cli": "iop"
+      },
+      "connection_guide": "iop/connect/README.md",
+      "capabilities": [
+        "Persistent experiment programs and device coordination",
+        "Operating conditions, parameter sweeps and measured arrays",
+        "Recorded research episodes"
+      ],
+      "requirements": [
+        "Instrument-specific drivers and physical platform configuration",
+        "Optional native executor and device dependencies"
+      ],
+      "examples": [
+        {
+          "path": "examples/iop/resumable-acquisition/README.md",
+          "description": "Resume an acquisition program"
+        }
+      ],
+      "existing_releases": "https://github.com/Cherish0925/IOP/releases"
+    },
+    {
+      "id": "optics-photonics",
+      "name": "Optics–Photonics AI Lab",
+      "repository": "https://github.com/EnvFoundry/Optics-Photonics-AI-Lab",
+      "origin_repository": "https://github.com/Cherish0925/Optics-Photonics-AI-Lab",
+      "reviewed_revision": "31252535a237e3c6c2206700e65afeb09aeaea46",
+      "summary": "Optical modelling, scientific solver execution and result analysis.",
+      "interfaces": [
+        "python",
+        "typescript",
+        "cli",
+        "mcp"
+      ],
+      "installation": {
+        "python": ">=3.10",
+        "extras": [],
+        "cli": "optics-photonics"
+      },
+      "connection_guide": "docs/CONNECT.md",
+      "capabilities": [
+        "Software discovery and independently installed solver environments",
+        "Native scientific programs, workflows, sweeps and optimization",
+        "Measured material data, partial array reads and episode collection"
+      ],
+      "requirements": [
+        "Each solver has its own installation and platform requirements",
+        "Commercial SDKs require installed software and the relevant licence; current adapters have SDK-double tests, not licensed-solver verification"
+      ],
+      "examples": [
+        {
+          "path": "examples/README.md",
+          "description": "Native programs and scientific calculations"
+        }
+      ],
+      "existing_releases": "https://github.com/Cherish0925/Optics-Photonics-AI-Lab/releases"
+    },
+    {
+      "id": "data-engineering",
+      "name": "Data Engineering",
+      "repository": "https://github.com/EnvFoundry/Data-Engineering",
+      "origin_repository": "https://github.com/Cherish0925/Data-Engineering",
+      "reviewed_revision": "c6be7171b6adf643ea3418307d7ad4d168acf033",
+      "summary": "Versioned source releases, budgeted mixtures and resumable consumption.",
+      "interfaces": [
+        "python",
+        "cli",
+        "mcp"
+      ],
+      "installation": {
+        "python": ">=3.11",
+        "extras": [
+          "mcp"
+        ],
+        "cli": "ai-data"
+      },
+      "connection_guide": "docs/integrations.md",
+      "capabilities": [
+        "Canonical JSONL releases with lineage and explicit partitions",
+        "Budgeted mixtures with indexed shards and resumable rank readers",
+        "Task and trajectory interchange with Verifiable Agent Gym"
+      ],
+      "requirements": [
+        "Local filesystem workspace",
+        "Source preparation currently holds records in memory; remote preparation and trainer-specific integrations are separate work"
+      ],
+      "examples": [
+        {
+          "path": "examples/compose_training.py",
+          "description": "Build and consume a budgeted mixture"
+        },
+        {
+          "path": "examples/experience_cycle.py",
+          "description": "Run the task-to-experience round trip with Agent Gym"
+        }
+      ]
+    },
+    {
+      "id": "verifiable-agent-gym",
+      "name": "Verifiable Agent Gym",
+      "repository": "https://github.com/EnvFoundry/Verifiable-Agent-Gym",
+      "origin_repository": "https://github.com/Cherish0925/Verifiable-Agent-Gym",
+      "reviewed_revision": "82b7100d88be2d1158d355802e6a864cde1e5684",
+      "summary": "Executable tasks, independent evaluation and reusable trajectories.",
+      "interfaces": [
+        "python",
+        "cli",
+        "mcp",
+        "json-stdio"
+      ],
+      "installation": {
+        "python": ">=3.11",
+        "extras": [
+          "mcp"
+        ],
+        "cli": "agent-gym"
+      },
+      "connection_guide": "docs/install.md",
+      "capabilities": [
+        "Versioned task suites and resumable task issuance",
+        "Concurrent environment slots and grouped rollout export",
+        "SQL task packs and generated scientific tasks"
+      ],
+      "requirements": [
+        "Local execution host and the resources required by each task provider",
+        "Live environment restoration, remote workers and trainer-specific adapters remain integration work"
+      ],
+      "examples": [
+        {
+          "path": "examples/batched_rollouts.py",
+          "description": "Collect grouped attempts through batched slots"
+        },
+        {
+          "path": "examples/sql-workload/agent.py",
+          "description": "Run dataset-backed SQL tasks"
+        }
+      ]
+    }
+  ]
+}

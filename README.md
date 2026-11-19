@@ -1,2 +1,68 @@
-# environments
-Open research environments: a catalogue, connection guides and conventions for researchers and agent systems.
+# EnvFoundry
+
+**Open environments for autonomous research.**
+
+[中文](README.zh-CN.md) · [Catalogue](catalog.json) · [Connection guide](CONNECT.md) · [Contribute](CONTRIBUTING.md)
+
+EnvFoundry is a workshop for building, maintaining and extending research environments. An environment brings together the software, resources, operations and records needed to do a kind of research. People and agents use the same underlying implementation.
+
+This repository is the entry point. Each environment keeps its own source, dependencies, runtime and releases.
+
+## Environments
+
+| Environment | Working capabilities | Interfaces |
+| --- | --- | --- |
+| [IOP](https://github.com/EnvFoundry/IOP) | Instrument operations, experimental platforms, persistent programs, operating conditions and measured arrays. | Python, TypeScript, CLI, HTTP, MCP |
+| [Optics–Photonics AI Lab](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | Optical software discovery, solver environments, native scientific programs, sweeps, optimization and scientific results. | Python, TypeScript, CLI, MCP |
+| [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | Source releases, lineage and splits, budgeted mixtures, indexed shards and resumable readers. | Python, CLI, MCP |
+| [Verifiable Agent Gym](https://github.com/EnvFoundry/Verifiable-Agent-Gym) | Task packages, batched environment interactions, independent evaluation and grouped rollout export. | Python, CLI, MCP, JSON process protocol |
+
+These projects serve Agentic Research OS, coding agents, other research systems and direct human use. A host chooses an implemented interface; a dedicated integration is optional. Compatibility with an interface does not imply that every host release or external solver has been tested.
+
+## Start with one environment
+
+Clone the project you need from EnvFoundry and follow its installation guide. Keep a separate Python environment for each project: scientific libraries and MCP dependencies have different version requirements.
+
+| Project | Python | Install from its checkout | Connection guide |
+| --- | --- | --- | --- |
+| IOP | 3.10+ | `python -m pip install -e ".[agent]"` | [Instruments and hosts](https://github.com/EnvFoundry/IOP/blob/main/iop/connect/README.md) |
+| Optics–Photonics | 3.10+ | `python -m pip install -e .` | [Solvers and hosts](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab/blob/main/docs/CONNECT.md) |
+| Data Engineering | 3.11+ | `python -m pip install -e ".[mcp]"` | [Data interfaces](https://github.com/EnvFoundry/Data-Engineering/blob/main/docs/integrations.md) |
+| Agent Gym | 3.11+ | `python -m pip install -e ".[mcp]"` | [Agent installation](https://github.com/EnvFoundry/Verifiable-Agent-Gym/blob/main/docs/install.md) |
+
+Install the execution environment where its resources live. Instrument drivers belong on the laboratory computer; commercial scientific SDKs belong on a machine with the software and its licence. A web application connects through a host integration or service. [Connection guide](CONNECT.md).
+
+## Compose existing capabilities
+
+Data Engineering and Agent Gym already share a working task-to-experience path. With their repositories checked out side by side and both core packages installed in an environment, run from `Data-Engineering`:
+
+```sh
+python examples/experience_cycle.py --gym-tasks ../Verifiable-Agent-Gym/examples/sql-workload/tasks.jsonl --output runs/experience-cycle
+```
+
+It prepares SQL task data, collects grouped attempts, imports trajectories, composes data shards and checks reader restart. The example uses scripted policies. Replace the policy and connect your learner to study learning outcomes.
+
+IOP and Optics–Photonics expose measured results and recorded episodes through their own interfaces. Further combinations should name the transferred quantities, units, file formats and run identities, and include a working example in the relevant project.
+
+## Discover programmatically
+
+[`catalog.json`](catalog.json) lists stable environment IDs, repositories, reviewed source revisions, interfaces, prerequisites and examples. [`catalog.schema.json`](catalog.schema.json) defines its format. The catalogue contains descriptive metadata; reading it does not install or execute software.
+
+Consumers can fetch the catalogue or vendor a pinned copy. Use a repository commit or release to reproduce an installation. `reviewed_revision` records the source used for the entry; it is not an automatically updated latest-version pointer.
+
+```sh
+python -m pip install "jsonschema>=4,<5"
+python validate.py
+```
+
+## Development home
+
+New development and pull requests belong in the EnvFoundry repositories. The original repositories under `Cherish0925` remain available with their history, discussions, releases and existing links. Existing downloadable IOP and optics release packages remain at their original locations; source development is now hosted here. Forks preserve Git history but do not copy release attachments or issue discussions.
+
+Use one development home per change. An existing personal-repository branch can be brought into its EnvFoundry counterpart through a pull request, retaining its commits. Publishing new releases from EnvFoundry is independent of the original releases.
+
+## Extend the workshop
+
+New research environments belong in their own repositories. Add an entry here when someone can install the environment and run a meaningful example. Shared conventions describe discovery and connection; domain models, execution engines and dependencies stay with the environment that owns them.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development and catalogue changes. This directory is MIT-licensed. Each environment and external tool retains its own licence.

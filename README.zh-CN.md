@@ -1,0 +1,59 @@
+# EnvFoundry
+
+**面向自主研究的开放环境。**
+
+[English](README.md) · [环境目录](catalog.json) · [连接说明](CONNECT.md) · [参与开发](CONTRIBUTING.md)
+
+EnvFoundry 是持续构建、维护和扩展研究环境的工坊。研究环境把一类工作所需的软件、资源、操作和记录组织起来，供研究人员与 Agent 使用。
+
+这里提供统一入口。每个环境保留自己的代码、依赖、运行时和发布版本。
+
+| 环境 | 已有能力 | 接口 |
+| --- | --- | --- |
+| [IOP](https://github.com/EnvFoundry/IOP) | 仪器操作、实验平台、持久运行的实验程序、工作条件维护和测量数组。 | Python、TypeScript、CLI、HTTP、MCP |
+| [光学与光子学实验室](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | 光学软件检索、求解器环境、原生科学计算程序、参数扫描、优化和结果读取。 | Python、TypeScript、CLI、MCP |
+| [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | 数据版本、来源关系与划分、预算约束下的混合、索引分片和可恢复读取。 | Python、CLI、MCP |
+| [Verifiable Agent Gym](https://github.com/EnvFoundry/Verifiable-Agent-Gym) | 任务包、批量环境交互、独立结果评价和分组轨迹导出。 | Python、CLI、MCP、JSON 进程协议 |
+
+这些环境面向 Agentic Research OS、coding agent、其他研究系统，也支持人直接使用。宿主选择已有接口即可接入；特定产品的插件是可选适配层。协议兼容与特定宿主、商业软件版本的实际测试分别记录。
+
+## 安装与连接
+
+从 EnvFoundry 克隆需要的仓库，按仓库说明安装。**每个环境使用独立的 Python 环境**，避免科学软件和 MCP 依赖的版本冲突。
+
+| 环境 | Python | 在对应仓库内安装 | 连接说明 |
+| --- | --- | --- | --- |
+| IOP | 3.10+ | `python -m pip install -e ".[agent]"` | [仪器与宿主](https://github.com/EnvFoundry/IOP/blob/main/iop/connect/README.md) |
+| 光学与光子学 | 3.10+ | `python -m pip install -e .` | [求解器与宿主](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab/blob/main/docs/CONNECT.md) |
+| Data Engineering | 3.11+ | `python -m pip install -e ".[mcp]"` | [数据接口](https://github.com/EnvFoundry/Data-Engineering/blob/main/docs/integrations.md) |
+| Agent Gym | 3.11+ | `python -m pip install -e ".[mcp]"` | [Agent 安装](https://github.com/EnvFoundry/Verifiable-Agent-Gym/blob/main/docs/install.md) |
+
+执行环境部署在资源所在的计算机上：仪器驱动运行在实验电脑，商业求解器使用本机安装的软件、SDK 和许可证。Web 产品通过相应服务或本地连接组件调用环境。[连接说明](CONNECT.md) 列出具体入口。
+
+## 已有的组合示例
+
+Data Engineering 与 Agent Gym 已有贯通的数据流程。将两个仓库并列克隆，在同一 Python 环境中安装两个核心包，然后从 `Data-Engineering` 目录运行：
+
+```sh
+python examples/experience_cycle.py --gym-tasks ../Verifiable-Agent-Gym/examples/sql-workload/tasks.jsonl --output runs/experience-cycle
+```
+
+该示例完成 SQL 任务数据准备、分组尝试、轨迹导入、训练数据分片和读取恢复。示例使用脚本策略；学习效果需要接入实际模型和训练过程。
+
+IOP 与光学环境分别提供测量结果和实验轨迹。扩展组合时，在所属仓库提供可运行示例，并明确交换的物理量、单位、文件格式和运行标识。
+
+## 供系统读取
+
+[`catalog.json`](catalog.json) 保存稳定的环境 ID、仓库地址、查阅过的源代码版本、接口、运行条件和示例；[`catalog.schema.json`](catalog.schema.json) 定义格式。读取目录本身不会安装或执行软件。
+
+系统可以获取目录，也可以固定一个版本随产品分发。复现实验时固定各环境的提交或发布版本。`reviewed_revision` 是目录描述对应的代码版本，并非自动追踪最新提交的指针。
+
+## 后续开发
+
+新开发和 PR 以 EnvFoundry 下的对应仓库为主。`Cherish0925` 下的四个原仓库完整保留，已有提交、讨论、发布包和链接继续可用。现有 IOP 与光学二进制发布包仍从原地址下载；组织仓库承担后续源代码开发。Git 派生保留代码历史，发布附件和 Issues 不会随之复制。
+
+已有个人仓库分支可以通过 PR 纳入组织仓库，保留原提交。组织后续独立发布新版本，避免同一个改动在两个地方分别维护。
+
+未来新环境独立建仓，提供明确的输入输出、安装入口和一个真实可运行的示例后，加入统一目录。共享约定保持简洁；领域模型、执行方式和依赖由各环境维护。
+
+本目录使用 MIT 许可证，各研究环境及其调用的第三方工具保留各自许可证。[参与开发](CONTRIBUTING.md)。
