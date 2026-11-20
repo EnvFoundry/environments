@@ -159,6 +159,47 @@
           "description": "Run dataset-backed SQL tasks"
         }
       ]
+    },
+    {
+      "id": "ai-evaluation",
+      "name": "AI Evaluation",
+      "repository": "https://github.com/EnvFoundry/AI-Evaluation",
+      "reviewed_revision": "ce2a55fb79a45a0807466cb7004a6f6d18190a5d",
+      "summary": "Benchmark design, reproducible evaluation and statistical comparison for AI systems.",
+      "interfaces": [
+        "python",
+        "cli",
+        "mcp",
+        "json-stdio"
+      ],
+      "installation": {
+        "python": ">=3.11",
+        "extras": [
+          "mcp"
+        ],
+        "cli": "ai-eval"
+      },
+      "connection_guide": "docs/connect.md",
+      "capabilities": [
+        "Versioned study contracts, resumable concurrent execution and target/scorer/importer plugins",
+        "Weighted sample means, paired independent-group bootstrap, slices and pass@k",
+        "Categorical judge calibration with reference-label coverage and agreement",
+        "Gym and Inspect imports, portable reports and a working Gym–Evaluation–Data round trip"
+      ],
+      "requirements": [
+        "Local filesystem and Python execution host; MCP optional",
+        "Model serving and domain execution supplied by target or upstream runtime; sample descriptors and result rows currently held in memory"
+      ],
+      "examples": [
+        {
+          "path": "examples/run_examples.py",
+          "description": "Compare authored retrieval predictions and run physics parameter recovery"
+        },
+        {
+          "path": "integration/gym_roundtrip.py",
+          "description": "Execute actual Gym episodes, compare policies and retain Data Engineering releases"
+        }
+      ]
     }
   ]
 }

@@ -14,6 +14,7 @@ EnvFoundry 是持续构建、维护和扩展研究环境的工坊。研究环境
 | [光学与光子学实验室](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | 光学软件检索、求解器环境、原生科学计算程序、参数扫描、优化和结果读取。 | Python、TypeScript、CLI、MCP |
 | [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | 数据版本、来源关系与划分、预算约束下的混合、索引分片和可恢复读取。 | Python、CLI、MCP |
 | [Verifiable Agent Gym](https://github.com/EnvFoundry/Verifiable-Agent-Gym) | 任务包、批量环境交互、独立结果评价和分组轨迹导出。 | Python、CLI、MCP、JSON 进程协议 |
+| [AI Evaluation](https://github.com/EnvFoundry/AI-Evaluation) | 基准执行、分组统计比较、评审校准和外部结果导入。 | Python、CLI、MCP、JSON 进程协议 |
 
 这些环境面向 Agentic Research OS、coding agent、其他研究系统，也支持人直接使用。宿主选择已有接口即可接入；特定产品的插件是可选适配层。协议兼容与特定宿主、商业软件版本的实际测试分别记录。
 
@@ -27,6 +28,7 @@ EnvFoundry 是持续构建、维护和扩展研究环境的工坊。研究环境
 | 光学与光子学 | 3.10+ | `python -m pip install -e .` | [求解器与宿主](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab/blob/main/docs/CONNECT.md) |
 | Data Engineering | 3.11+ | `python -m pip install -e ".[mcp]"` | [数据接口](https://github.com/EnvFoundry/Data-Engineering/blob/main/docs/integrations.md) |
 | Agent Gym | 3.11+ | `python -m pip install -e ".[mcp]"` | [Agent 安装](https://github.com/EnvFoundry/Verifiable-Agent-Gym/blob/main/docs/install.md) |
+| AI Evaluation | 3.11+ | `python -m pip install -e ".[mcp]"` | [评测接口](https://github.com/EnvFoundry/AI-Evaluation/blob/main/docs/connect.md) |
 
 执行环境部署在资源所在的计算机上：仪器驱动运行在实验电脑，商业求解器使用本机安装的软件、SDK 和许可证。Web 产品通过相应服务或本地连接组件调用环境。[连接说明](CONNECT.md) 列出具体入口。
 
@@ -39,6 +41,8 @@ python examples/experience_cycle.py --gym-tasks ../Verifiable-Agent-Gym/examples
 ```
 
 该示例完成 SQL 任务数据准备、分组尝试、轨迹导入、训练数据分片和读取恢复。示例使用脚本策略；学习效果需要接入实际模型和训练过程。
+
+AI Evaluation 提供已贯通的 [Gym–Evaluation–Data 示例](https://github.com/EnvFoundry/AI-Evaluation/blob/main/docs/gym-integration.md)：执行相同任务总体，导入验证结果，进行分组统计比较，并把同一批轨迹保留在数据版本中。
 
 IOP 与光学环境分别提供测量结果和实验轨迹。扩展组合时，在所属仓库提供可运行示例，并明确交换的物理量、单位、文件格式和运行标识。
 
