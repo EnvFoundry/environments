@@ -10,8 +10,8 @@ EnvFoundry 是持续构建、维护和扩展研究环境的工坊。研究环境
 
 | 环境 | 已有能力 | 接口 |
 | --- | --- | --- |
-| [IOP](https://github.com/EnvFoundry/IOP) | 仪器操作、实验平台、持久运行的实验程序、工作条件维护和测量数组。 | Python、TypeScript、CLI、HTTP、MCP |
-| [光学与光子学实验室](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | 光学软件检索、求解器环境、原生科学计算程序、参数扫描、优化和结果读取。 | Python、TypeScript、CLI、MCP |
+| [IOP](https://github.com/EnvFoundry/IOP) | 仪器操作、实验平台、持久运行的实验程序、工作条件维护和保留关联不确定度的测量。 | Python、TypeScript、CLI、HTTP、MCP |
+| [光学与光子学实验室](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | 光学软件与独立接入包、求解器环境、科学计算程序、可接续的参数研究和结果分析。 | Python、TypeScript、CLI、MCP |
 | [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | 数据版本、来源关系与划分、预算约束下的混合、索引分片和可恢复读取。 | Python、CLI、MCP |
 | [Verifiable Agent Gym](https://github.com/EnvFoundry/Verifiable-Agent-Gym) | 任务包、批量环境交互、独立结果评价和分组轨迹导出。 | Python、CLI、MCP、JSON 进程协议 |
 | [AI Evaluation](https://github.com/EnvFoundry/AI-Evaluation) | 基准执行、分组统计比较、评审校准和外部结果导入。 | Python、CLI、MCP、JSON 进程协议 |
