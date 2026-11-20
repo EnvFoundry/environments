@@ -61,7 +61,7 @@ python validate.py
 
 ## Development home
 
-New development and pull requests belong in the EnvFoundry repositories. The original repositories under `Cherish0925` remain available with their history, discussions, releases and existing links. Existing downloadable IOP and optics release packages remain at their original locations; source development is now hosted here. Forks preserve Git history but do not copy release attachments or issue discussions.
+New development and pull requests belong in the EnvFoundry repositories. Download current packages from [IOP releases](https://github.com/EnvFoundry/IOP/releases) and [Optics–Photonics releases](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab/releases). The original repositories under `Cherish0925` retain their history, discussions, earlier releases and existing links. Each repository builds its own release attachments; Git synchronization preserves source history.
 
 Use one development home per change. An existing personal-repository branch can be brought into its EnvFoundry counterpart through a pull request, retaining its commits. Publishing new releases from EnvFoundry is independent of the original releases.
 

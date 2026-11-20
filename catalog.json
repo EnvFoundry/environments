@@ -7,7 +7,7 @@
       "name": "IOP",
       "repository": "https://github.com/EnvFoundry/IOP",
       "origin_repository": "https://github.com/Cherish0925/IOP",
-      "reviewed_revision": "44964ba8d48a56a7126b51d5dbf14b49c2149d1c",
+      "reviewed_revision": "9012a03500ab5186fbc7ccb6606586a8b5a2f790",
       "summary": "Physical instruments and experimental platforms.",
       "interfaces": [
         "python",
@@ -28,7 +28,8 @@
         "Persistent experiment programs and device coordination",
         "Adaptive sweeps, step recovery and operating-condition maintenance",
         "Measured arrays, spectral analysis and line fitting",
-        "Recorded research episodes and portable experiment archives"
+        "Recorded research episodes and portable experiment archives",
+        "Find and continue experiments by project, name, request or instrument"
       ],
       "requirements": [
         "Instrument-specific drivers and physical platform configuration",
@@ -40,14 +41,14 @@
           "description": "Resume an acquisition program"
         }
       ],
-      "existing_releases": "https://github.com/Cherish0925/IOP/releases"
+      "existing_releases": "https://github.com/EnvFoundry/IOP/releases"
     },
     {
       "id": "optics-photonics",
       "name": "Optics–Photonics AI Lab",
       "repository": "https://github.com/EnvFoundry/Optics-Photonics-AI-Lab",
       "origin_repository": "https://github.com/Cherish0925/Optics-Photonics-AI-Lab",
-      "reviewed_revision": "c34ea8437de62cc5feb0b0e519c6b6f2e1da4584",
+      "reviewed_revision": "caa243d81713fab7fc46c79c597f452ac8f67ef9",
       "summary": "Optical modelling, scientific solver execution and result analysis.",
       "interfaces": [
         "python",
@@ -62,10 +63,11 @@
       },
       "connection_guide": "docs/CONNECT.md",
       "capabilities": [
-        "Software discovery, installation recipes and local solver bindings",
+        "Domain-aware software and program discovery, installation recipes and local bindings",
         "Native and multilingual scientific programs through shared jobs and resources",
         "Workflows, parameter sweeps and optimization",
-        "Measured material data, partial array reads and episode collection"
+        "Measured material data, partial array reads and episode collection",
+        "Laboratory programs with preserved raw measurements and shared device coordination"
       ],
       "requirements": [
         "Each solver has its own installation and platform requirements",
@@ -77,7 +79,7 @@
           "description": "Native programs and scientific calculations"
         }
       ],
-      "existing_releases": "https://github.com/Cherish0925/Optics-Photonics-AI-Lab/releases"
+      "existing_releases": "https://github.com/EnvFoundry/Optics-Photonics-AI-Lab/releases"
     },
     {
       "id": "data-engineering",

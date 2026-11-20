@@ -54,7 +54,7 @@ IOP 与光学环境分别提供测量结果和实验轨迹。扩展组合时，�
 
 ## 后续开发
 
-新开发和 PR 以 EnvFoundry 下的对应仓库为主。`Cherish0925` 下的四个原仓库完整保留，已有提交、讨论、发布包和链接继续可用。现有 IOP 与光学二进制发布包仍从原地址下载；组织仓库承担后续源代码开发。Git 派生保留代码历史，发布附件和 Issues 不会随之复制。
+新开发和 PR 以 EnvFoundry 下的对应仓库为主。当前安装包可从 [IOP 发布页](https://github.com/EnvFoundry/IOP/releases)和[光学实验室发布页](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab/releases)下载。`Cherish0925` 下的四个原仓库完整保留，已有提交、讨论、历史发布包和链接继续可用。各仓库分别构建发布附件；Git 同步保留源代码历史。
 
 已有个人仓库分支可以通过 PR 纳入组织仓库，保留原提交。组织后续独立发布新版本，避免同一个改动在两个地方分别维护。
 
