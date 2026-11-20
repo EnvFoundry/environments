@@ -7,7 +7,7 @@
       "name": "IOP",
       "repository": "https://github.com/EnvFoundry/IOP",
       "origin_repository": "https://github.com/Cherish0925/IOP",
-      "reviewed_revision": "d8f3f61130b5b450afe508603cf0cb1a9d6fd15f",
+      "reviewed_revision": "44964ba8d48a56a7126b51d5dbf14b49c2149d1c",
       "summary": "Physical instruments and experimental platforms.",
       "interfaces": [
         "python",
@@ -26,8 +26,9 @@
       "connection_guide": "iop/connect/README.md",
       "capabilities": [
         "Persistent experiment programs and device coordination",
-        "Operating conditions, parameter sweeps and measured arrays",
-        "Recorded research episodes"
+        "Adaptive sweeps, step recovery and operating-condition maintenance",
+        "Measured arrays, spectral analysis and line fitting",
+        "Recorded research episodes and portable experiment archives"
       ],
       "requirements": [
         "Instrument-specific drivers and physical platform configuration",
@@ -46,7 +47,7 @@
       "name": "Optics–Photonics AI Lab",
       "repository": "https://github.com/EnvFoundry/Optics-Photonics-AI-Lab",
       "origin_repository": "https://github.com/Cherish0925/Optics-Photonics-AI-Lab",
-      "reviewed_revision": "31252535a237e3c6c2206700e65afeb09aeaea46",
+      "reviewed_revision": "c34ea8437de62cc5feb0b0e519c6b6f2e1da4584",
       "summary": "Optical modelling, scientific solver execution and result analysis.",
       "interfaces": [
         "python",
@@ -61,13 +62,14 @@
       },
       "connection_guide": "docs/CONNECT.md",
       "capabilities": [
-        "Software discovery and independently installed solver environments",
-        "Native scientific programs, workflows, sweeps and optimization",
+        "Software discovery, installation recipes and local solver bindings",
+        "Native and multilingual scientific programs through shared jobs and resources",
+        "Workflows, parameter sweeps and optimization",
         "Measured material data, partial array reads and episode collection"
       ],
       "requirements": [
         "Each solver has its own installation and platform requirements",
-        "Commercial SDKs require installed software and the relevant licence; current adapters have SDK-double tests, not licensed-solver verification"
+        "Commercial solvers require an installed licensed application and its supported API or script interface"
       ],
       "examples": [
         {
