@@ -16,6 +16,7 @@ This repository is the entry point. Each environment keeps its own source, depen
 | [Optics–Photonics AI Lab](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | Optical software discovery, solver environments, native scientific programs, sweeps, optimization and scientific results. | Python, TypeScript, CLI, MCP |
 | [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | Source releases, lineage and splits, budgeted mixtures, indexed shards and resumable readers. | Python, CLI, MCP |
 | [Verifiable Agent Gym](https://github.com/EnvFoundry/Verifiable-Agent-Gym) | Task packages, batched environment interactions, independent evaluation and grouped rollout export. | Python, CLI, MCP, JSON process protocol |
+| [AI Evaluation](https://github.com/EnvFoundry/AI-Evaluation) | Benchmark execution, grouped statistical comparisons, judge calibration and existing-run imports. | Python, CLI, MCP, JSON process protocol |
 
 These projects serve Agentic Research OS, coding agents, other research systems and direct human use. A host chooses an implemented interface; a dedicated integration is optional. Compatibility with an interface does not imply that every host release or external solver has been tested.
 
@@ -29,6 +30,7 @@ Clone the project you need from EnvFoundry and follow its installation guide. Ke
 | Optics–Photonics | 3.10+ | `python -m pip install -e .` | [Solvers and hosts](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab/blob/main/docs/CONNECT.md) |
 | Data Engineering | 3.11+ | `python -m pip install -e ".[mcp]"` | [Data interfaces](https://github.com/EnvFoundry/Data-Engineering/blob/main/docs/integrations.md) |
 | Agent Gym | 3.11+ | `python -m pip install -e ".[mcp]"` | [Agent installation](https://github.com/EnvFoundry/Verifiable-Agent-Gym/blob/main/docs/install.md) |
+| AI Evaluation | 3.11+ | `python -m pip install -e ".[mcp]"` | [Evaluation interfaces](https://github.com/EnvFoundry/AI-Evaluation/blob/main/docs/connect.md) |
 
 Install the execution environment where its resources live. Instrument drivers belong on the laboratory computer; commercial scientific SDKs belong on a machine with the software and its licence. A web application connects through a host integration or service. [Connection guide](CONNECT.md).
 
@@ -41,6 +43,8 @@ python examples/experience_cycle.py --gym-tasks ../Verifiable-Agent-Gym/examples
 ```
 
 It prepares SQL task data, collects grouped attempts, imports trajectories, composes data shards and checks reader restart. The example uses scripted policies. Replace the policy and connect your learner to study learning outcomes.
+
+AI Evaluation adds a [working Gym–Evaluation–Data integration](https://github.com/EnvFoundry/AI-Evaluation/blob/main/docs/gym-integration.md): execute matched task populations, import verifier outcomes, compare policies with grouped uncertainty, and retain the same trajectories in data releases.
 
 IOP and Optics–Photonics expose measured results and recorded episodes through their own interfaces. Further combinations should name the transferred quantities, units, file formats and run identities, and include a working example in the relevant project.
 
