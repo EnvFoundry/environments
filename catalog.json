@@ -7,7 +7,7 @@
       "name": "IOP",
       "repository": "https://github.com/EnvFoundry/IOP",
       "origin_repository": "https://github.com/Cherish0925/IOP",
-      "reviewed_revision": "9012a03500ab5186fbc7ccb6606586a8b5a2f790",
+      "reviewed_revision": "b05dad7962260113cecce170b82ed1eba0144a6d",
       "summary": "Physical instruments and experimental platforms.",
       "interfaces": [
         "python",
@@ -29,7 +29,8 @@
         "Adaptive sweeps, step recovery and operating-condition maintenance",
         "Measured arrays, spectral analysis and line fitting",
         "Recorded research episodes and portable experiment archives",
-        "Find and continue experiments by project, name, request or instrument"
+        "Find and continue experiments by project, name, request or instrument",
+        "Reference-normalized measurements with correlated uncertainty and resumable statistics"
       ],
       "requirements": [
         "Instrument-specific drivers and physical platform configuration",
@@ -39,6 +40,10 @@
         {
           "path": "examples/iop/resumable-acquisition/README.md",
           "description": "Resume an acquisition program"
+        },
+        {
+          "path": "examples/iop/reference-measurement/README.md",
+          "description": "Measure a reference-normalized quantity with shared uncertainty and saved progress"
         }
       ],
       "existing_releases": "https://github.com/EnvFoundry/IOP/releases"
@@ -48,7 +53,7 @@
       "name": "Optics–Photonics AI Lab",
       "repository": "https://github.com/EnvFoundry/Optics-Photonics-AI-Lab",
       "origin_repository": "https://github.com/Cherish0925/Optics-Photonics-AI-Lab",
-      "reviewed_revision": "caa243d81713fab7fc46c79c597f452ac8f67ef9",
+      "reviewed_revision": "fd52b688690a632b0ae790d0cb6bc9773c7ff326",
       "summary": "Optical modelling, scientific solver execution and result analysis.",
       "interfaces": [
         "python",
@@ -67,7 +72,9 @@
         "Native and multilingual scientific programs through shared jobs and resources",
         "Workflows, parameter sweeps and optimization",
         "Measured material data, partial array reads and episode collection",
-        "Laboratory programs with preserved raw measurements and shared device coordination"
+        "Laboratory programs with preserved raw measurements and shared device coordination",
+        "Independent integration packages with programs, recipes and on-demand guides",
+        "Saved program state, continued optimization and grouped sweeps, searchable run history"
       ],
       "requirements": [
         "Each solver has its own installation and platform requirements",
@@ -77,6 +84,14 @@
         {
           "path": "examples/README.md",
           "description": "Native programs and scientific calculations"
+        },
+        {
+          "path": "examples/integration/README.md",
+          "description": "Install and run an independently maintained Gaussian-beam program"
+        },
+        {
+          "path": "examples/continuation/README.md",
+          "description": "Continue a diffraction calculation from saved detector points"
         }
       ],
       "existing_releases": "https://github.com/EnvFoundry/Optics-Photonics-AI-Lab/releases"
