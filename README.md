@@ -12,7 +12,7 @@ This repository is the entry point. Each environment keeps its own source, depen
 
 | Environment | Working capabilities | Interfaces |
 | --- | --- | --- |
-| [IOP](https://github.com/EnvFoundry/IOP) | Instrument operations, experimental platforms, persistent programs, operating conditions and measurements with correlated uncertainty. | Python, TypeScript, CLI, HTTP, MCP |
+| [IOP](https://github.com/EnvFoundry/IOP) | Instrument operations, persistent experiments, physical conditions, unit-bearing readings and correlated uncertainty. | Python, TypeScript, CLI, HTTP, MCP |
 | [Optics–Photonics AI Lab](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | Optical software and independent integrations, solver environments, scientific programs, resumable studies and result analysis. | Python, TypeScript, CLI, MCP |
 | [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | Source releases, lineage and splits, budgeted mixtures, indexed shards and resumable readers. | Python, CLI, MCP |
 | [Verifiable Agent Gym](https://github.com/EnvFoundry/Verifiable-Agent-Gym) | Task packages, batched environment interactions, independent evaluation and grouped rollout export. | Python, CLI, MCP, JSON process protocol |
