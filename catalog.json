@@ -7,7 +7,7 @@
       "name": "IOP",
       "repository": "https://github.com/EnvFoundry/IOP",
       "origin_repository": "https://github.com/Cherish0925/IOP",
-      "reviewed_revision": "769161227afb073138c465d699f6079e0018d36b",
+      "reviewed_revision": "1a57027100b973540e672aafdae1c23f12a78033",
       "summary": "Physical instruments and experimental platforms.",
       "interfaces": [
         "python",
@@ -31,8 +31,8 @@
         "Recorded research episodes and portable experiment archives",
         "Find and continue experiments by project, name, request or instrument",
         "Reference-normalized measurements with correlated uncertainty and resumable statistics",
-        "Unit-bearing inputs and tolerances, repeated-read stability and dynamic setpoints",
-        "Instrument reading quality and named physical disturbances with dependency-aware renewal"
+        "Unit-bearing inputs, sweep and seek ranges, tolerances, repeated-read stability and dynamic setpoints",
+        "Instrument reading quality, exact status bits, per-channel conditions and named physical disturbances"
       ],
       "requirements": [
         "Instrument-specific drivers and physical platform configuration",
