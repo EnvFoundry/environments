@@ -15,6 +15,7 @@ EnvFoundry 是持续构建、维护和扩展研究环境的工坊。研究环境
 | [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | 数据版本、来源关系与划分、预算约束下的混合、索引分片和可恢复读取。 | Python、CLI、MCP |
 | [Verifiable Agent Gym](https://github.com/EnvFoundry/Verifiable-Agent-Gym) | 任务包、批量环境交互、独立结果评价和分组轨迹导出。 | Python、CLI、MCP、JSON 进程协议 |
 | [AI Evaluation](https://github.com/EnvFoundry/AI-Evaluation) | 基准执行、分组统计比较、评审校准和外部结果导入。 | Python、CLI、MCP、JSON 进程协议 |
+| [HSS](https://github.com/EnvFoundry/HSS) | 人文社科：按需组合研究模块、形成研究方案、处理材料与实证分析、组织论文正文和结果表格。 | Python、TypeScript、CLI、HTTP、MCP、JSON 进程协议 |
 
 这些环境面向 Agentic Research OS、coding agent、其他研究系统，也支持人直接使用。宿主选择已有接口即可接入；特定产品的插件是可选适配层。协议兼容与特定宿主、商业软件版本的实际测试分别记录。
 
@@ -29,6 +30,7 @@ EnvFoundry 是持续构建、维护和扩展研究环境的工坊。研究环境
 | Data Engineering | 3.11+ | `python -m pip install -e ".[mcp]"` | [数据接口](https://github.com/EnvFoundry/Data-Engineering/blob/main/docs/integrations.md) |
 | Agent Gym | 3.11+ | `python -m pip install -e ".[mcp]"` | [Agent 安装](https://github.com/EnvFoundry/Verifiable-Agent-Gym/blob/main/docs/install.md) |
 | AI Evaluation | 3.11+ | `python -m pip install -e ".[mcp]"` | [评测接口](https://github.com/EnvFoundry/AI-Evaluation/blob/main/docs/connect.md) |
+| HSS | 3.11+ | `python -m pip install -e .` | [研究工作台与宿主](https://github.com/EnvFoundry/HSS/blob/main/docs/hosts.md) |
 
 执行环境部署在资源所在的计算机上：仪器驱动运行在实验电脑，商业求解器使用本机安装的软件、SDK 和许可证。Web 产品通过相应服务或本地连接组件调用环境。[连接说明](CONNECT.md) 列出具体入口。
 

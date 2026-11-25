@@ -17,6 +17,7 @@ This repository is the entry point. Each environment keeps its own source, depen
 | [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | Source releases, lineage and splits, budgeted mixtures, indexed shards and resumable readers. | Python, CLI, MCP |
 | [Verifiable Agent Gym](https://github.com/EnvFoundry/Verifiable-Agent-Gym) | Task packages, batched environment interactions, independent evaluation and grouped rollout export. | Python, CLI, MCP, JSON process protocol |
 | [AI Evaluation](https://github.com/EnvFoundry/AI-Evaluation) | Benchmark execution, grouped statistical comparisons, judge calibration and existing-run imports. | Python, CLI, MCP, JSON process protocol |
+| [HSS](https://github.com/EnvFoundry/HSS) | Humanities and social sciences: selected research modules, study design, material and empirical analysis, and manuscript assembly. | Python, TypeScript, CLI, HTTP, MCP, JSON process protocol |
 
 These projects serve Agentic Research OS, coding agents, other research systems and direct human use. A host chooses an implemented interface; a dedicated integration is optional. Compatibility with an interface does not imply that every host release or external solver has been tested.
 
@@ -31,6 +32,7 @@ Clone the project you need from EnvFoundry and follow its installation guide. Ke
 | Data Engineering | 3.11+ | `python -m pip install -e ".[mcp]"` | [Data interfaces](https://github.com/EnvFoundry/Data-Engineering/blob/main/docs/integrations.md) |
 | Agent Gym | 3.11+ | `python -m pip install -e ".[mcp]"` | [Agent installation](https://github.com/EnvFoundry/Verifiable-Agent-Gym/blob/main/docs/install.md) |
 | AI Evaluation | 3.11+ | `python -m pip install -e ".[mcp]"` | [Evaluation interfaces](https://github.com/EnvFoundry/AI-Evaluation/blob/main/docs/connect.md) |
+| HSS | 3.11+ | `python -m pip install -e .` | [Research workbench and hosts](https://github.com/EnvFoundry/HSS/blob/main/docs/hosts.md) |
 
 Install the execution environment where its resources live. Instrument drivers belong on the laboratory computer; commercial scientific SDKs belong on a machine with the software and its licence. A web application connects through a host integration or service. [Connection guide](CONNECT.md).
 
