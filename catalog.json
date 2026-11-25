@@ -6,7 +6,7 @@
       "id": "seedenv",
       "name": "SeedEnv",
       "repository": "https://github.com/EnvFoundry/SeedEnv",
-      "reviewed_revision": "602b689e8b88c7025978ae6a684f9326eb52b9bc",
+      "reviewed_revision": "2ac10c6bf264a5df8d28d96a573808e71398e56c",
       "summary": "Scientific Basics, Scientific Writing and selectable research software modules.",
       "interfaces": [
         "python",
