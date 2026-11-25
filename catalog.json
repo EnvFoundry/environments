@@ -7,7 +7,7 @@
       "name": "IOP",
       "repository": "https://github.com/EnvFoundry/IOP",
       "origin_repository": "https://github.com/Cherish0925/IOP",
-      "reviewed_revision": "00e134f05e907ae23412e73b46a5e599716b8071",
+      "reviewed_revision": "aef02eb74904145252dec602d2eed942ab9b4485",
       "summary": "Physical instruments and experimental platforms.",
       "interfaces": [
         "python",
