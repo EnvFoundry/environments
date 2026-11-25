@@ -3,6 +3,46 @@
   "schema_version": "1.0",
   "environments": [
     {
+      "id": "seedenv",
+      "name": "SeedEnv",
+      "repository": "https://github.com/EnvFoundry/SeedEnv",
+      "reviewed_revision": "602b689e8b88c7025978ae6a684f9326eb52b9bc",
+      "summary": "Scientific Basics, Scientific Writing and selectable research software modules.",
+      "interfaces": [
+        "python",
+        "typescript",
+        "rust",
+        "cli",
+        "mcp"
+      ],
+      "installation": {
+        "python": ">=3.11",
+        "extras": [],
+        "cli": "seedenv"
+      },
+      "connection_guide": "docs/integration.md",
+      "capabilities": [
+        "Discover research fields, directions and independently selectable modules",
+        "Prepare selected software, bind existing installations and reuse persistent environments",
+        "Share Scientific Basics and Scientific Writing with templates and compilation tools",
+        "Run preparation in the host product job, returning interpreter commands and locations"
+      ],
+      "requirements": [
+        "Python 3.11 or later for the preparation service",
+        "Selected scientific software has its own platform, package manager and hardware requirements"
+      ],
+      "examples": [
+        {
+          "path": "src/seedenv/data/examples/fit.py",
+          "description": "Fit measured data with scientific Python"
+        },
+        {
+          "path": "docs/integration.md",
+          "description": "Prepare selected modules through a host-owned request and reuse existing installations"
+        }
+      ]
+    },
+    {
       "id": "iop",
       "name": "IOP",
       "repository": "https://github.com/EnvFoundry/IOP",
