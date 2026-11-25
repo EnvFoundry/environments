@@ -12,6 +12,7 @@ This repository is the entry point. Each environment keeps its own source, depen
 
 | Environment | Working capabilities | Interfaces |
 | --- | --- | --- |
+| [SeedEnv](https://github.com/EnvFoundry/SeedEnv) | Scientific Basics, Scientific Writing, templates and selectable domain software; prepare only what is needed and reuse existing installations. | Python, TypeScript, Rust, CLI, MCP |
 | [IOP](https://github.com/EnvFoundry/IOP) | Instrument operations, persistent experiments, physical conditions, unit-bearing readings and correlated uncertainty. | Python, TypeScript, CLI, HTTP, MCP |
 | [Optics–Photonics AI Lab](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | Optical software and independent integrations, solver environments, scientific programs, resumable studies and result analysis. | Python, TypeScript, CLI, MCP |
 | [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | Source releases, lineage and splits, budgeted mixtures, indexed shards and resumable readers. | Python, CLI, MCP |
@@ -27,6 +28,7 @@ Clone the project you need from EnvFoundry and follow its installation guide. Ke
 
 | Project | Python | Install from its checkout | Connection guide |
 | --- | --- | --- | --- |
+| SeedEnv | 3.11+ | `python -m pip install -e .` | [Modules and host preparation](https://github.com/EnvFoundry/SeedEnv/blob/main/docs/integration.md) |
 | IOP | 3.10+ | `python -m pip install -e ".[agent]"` | [Instruments and hosts](https://github.com/EnvFoundry/IOP/blob/main/iop/connect/README.md) |
 | Optics–Photonics | 3.10+ | `python -m pip install -e .` | [Solvers and hosts](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab/blob/main/docs/CONNECT.md) |
 | Data Engineering | 3.11+ | `python -m pip install -e ".[mcp]"` | [Data interfaces](https://github.com/EnvFoundry/Data-Engineering/blob/main/docs/integrations.md) |

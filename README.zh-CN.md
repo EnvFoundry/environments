@@ -10,6 +10,7 @@ EnvFoundry 是持续构建、维护和扩展研究环境的工坊。研究环境
 
 | 环境 | 已有能力 | 接口 |
 | --- | --- | --- |
+| [SeedEnv](https://github.com/EnvFoundry/SeedEnv) | 科研基础、科研写作、模板及各领域的软件模块；按需准备，复用已有安装。 | Python、TypeScript、Rust、CLI、MCP |
 | [IOP](https://github.com/EnvFoundry/IOP) | 仪器操作、持久实验、物理工作条件、带单位读数和关联不确定度。 | Python、TypeScript、CLI、HTTP、MCP |
 | [光学与光子学实验室](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | 光学软件与独立接入包、求解器环境、科学计算程序、可接续的参数研究和结果分析。 | Python、TypeScript、CLI、MCP |
 | [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | 数据版本、来源关系与划分、预算约束下的混合、索引分片和可恢复读取。 | Python、CLI、MCP |
@@ -25,6 +26,7 @@ EnvFoundry 是持续构建、维护和扩展研究环境的工坊。研究环境
 
 | 环境 | Python | 在对应仓库内安装 | 连接说明 |
 | --- | --- | --- | --- |
+| SeedEnv | 3.11+ | `python -m pip install -e .` | [模块与宿主准备](https://github.com/EnvFoundry/SeedEnv/blob/main/docs/integration.md) |
 | IOP | 3.10+ | `python -m pip install -e ".[agent]"` | [仪器与宿主](https://github.com/EnvFoundry/IOP/blob/main/iop/connect/README.md) |
 | 光学与光子学 | 3.10+ | `python -m pip install -e .` | [求解器与宿主](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab/blob/main/docs/CONNECT.md) |
 | Data Engineering | 3.11+ | `python -m pip install -e ".[mcp]"` | [数据接口](https://github.com/EnvFoundry/Data-Engineering/blob/main/docs/integrations.md) |

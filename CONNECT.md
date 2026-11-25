@@ -8,6 +8,7 @@ Run these commands inside each project's installed Python environment.
 
 | Environment | Prepare a connection | Direct entry point |
 | --- | --- | --- |
+| SeedEnv | `seedenv connect mcp --group scientific-basics --output basics-agent`; choose other modules or Scientific Writing as needed | `seedenv`; Python, TypeScript and Rust host clients; generated MCP entry point |
 | IOP | `iop init`, `iop start`, then `iop connect --name bench --local` | `iop mcp`; Python/TypeScript clients and the service HTTP API |
 | Optics–Photonics | `optics-photonics connect agentic-research-os --output optics-plugin` for a Research OS package; consult the connection guide for other hosts | `optics-photonics mcp`; Python/TypeScript clients and CLI |
 | Data Engineering | `ai-data connect --root . --output data-engineering.local.json` | `ai-data serve --help`; Python and CLI |
