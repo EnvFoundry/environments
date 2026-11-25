@@ -223,6 +223,53 @@
           "description": "Execute actual Gym episodes, compare policies and retain Data Engineering releases"
         }
       ]
+    },
+    {
+      "id": "hss",
+      "name": "HSS",
+      "repository": "https://github.com/EnvFoundry/HSS",
+      "reviewed_revision": "6ef7c6a22542b7bc58b9ef5422bfca853313ffac",
+      "summary": "Humanities and social sciences research, with selected software, research design, material and empirical analysis, and manuscript assembly.",
+      "interfaces": [
+        "python",
+        "typescript",
+        "cli",
+        "http",
+        "mcp",
+        "json-stdio"
+      ],
+      "installation": {
+        "python": ">=3.11",
+        "extras": [],
+        "cli": "hss"
+      },
+      "connection_guide": "docs/hosts.md",
+      "capabilities": [
+        "Field, direction and shared-module selection with reusable software and separate project resources",
+        "Research blueprints, study execution, supplied manuscript sections and actual result tables",
+        "SQL datasets, Python and R analyses, project scripts and prepared command-line tools in one study",
+        "Rust UTF-8 corpus tools, C++ Unicode alignment and a TypeScript research workbench",
+        "Skills, knowledge, literature and data connections, and direct Origo repository-source import"
+      ],
+      "requirements": [
+        "Python 3.11 or later; Node.js for the standalone workbench",
+        "Selected upstream packages and services use their declared setup; R requires an available Rscript",
+        "Optional native text backends require Rust or a C++17 compiler"
+      ],
+      "examples": [
+        {
+          "path": "examples/materials-study.json",
+          "description": "Build a corpus, passages and an authored qualitative coding result"
+        },
+        {
+          "path": "examples/sql/study.json",
+          "description": "Join supplied research tables and calculate group means"
+        },
+        {
+          "path": "examples/native/study.json",
+          "description": "Profile, search and align Chinese texts with native engines"
+        }
+      ]
     }
   ]
 }
