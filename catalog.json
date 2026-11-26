@@ -100,8 +100,8 @@
       "name": "Optics–Photonics AI Lab",
       "repository": "https://github.com/EnvFoundry/Optics-Photonics-AI-Lab",
       "origin_repository": "https://github.com/Cherish0925/Optics-Photonics-AI-Lab",
-      "reviewed_revision": "fd52b688690a632b0ae790d0cb6bc9773c7ff326",
-      "summary": "Optical modelling, scientific solver execution and result analysis.",
+      "reviewed_revision": "012ffe14baa523aeb774b33fe8a5a3f429c85336",
+      "summary": "Open-source optical research tasks, scientific software, methods and reusable calculations.",
       "interfaces": [
         "python",
         "typescript",
@@ -113,9 +113,11 @@
         "extras": [],
         "cli": "optics-photonics"
       },
-      "connection_guide": "docs/CONNECT.md",
+      "connection_guide": "skills/optical-computation/references/start.md",
       "capabilities": [
-        "Domain-aware software and program discovery, installation recipes and local bindings",
+        "Research areas and task modules with a separate open-source software selection",
+        "Task-linked methods, Skills, prompts, editable programs and workflows, loaded on demand",
+        "Prepare selected components, reuse existing installations and retain software shared by other modules",
         "Native and multilingual scientific programs through shared jobs and resources",
         "Workflows, parameter sweeps and optimization",
         "Measured material data, partial array reads and episode collection",
@@ -124,8 +126,8 @@
         "Saved program state, continued optimization and grouped sweeps, searchable run history"
       ],
       "requirements": [
-        "Each solver has its own installation and platform requirements",
-        "Commercial solvers require an installed licensed application and its supported API or script interface"
+        "The connector needs Python 3.10+; each solver declares its platform and runtime requirements",
+        "Commercial applications are optional external connections and are excluded from the default installation catalogue"
       ],
       "examples": [
         {
