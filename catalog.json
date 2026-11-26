@@ -100,7 +100,7 @@
       "name": "Optics–Photonics AI Lab",
       "repository": "https://github.com/EnvFoundry/Optics-Photonics-AI-Lab",
       "origin_repository": "https://github.com/Cherish0925/Optics-Photonics-AI-Lab",
-      "reviewed_revision": "012ffe14baa523aeb774b33fe8a5a3f429c85336",
+      "reviewed_revision": "f110c20be9ec9a27e856dc046bf5e1c8747e8884",
       "summary": "Open-source optical research tasks, scientific software, methods and reusable calculations.",
       "interfaces": [
         "python",
