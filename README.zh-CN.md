@@ -12,7 +12,7 @@ EnvFoundry 是持续构建、维护和扩展研究环境的工坊。研究环境
 | --- | --- | --- |
 | [SeedEnv](https://github.com/EnvFoundry/SeedEnv) | 科研基础、科研写作、模板及各领域的软件模块；按需准备，复用已有安装。 | Python、TypeScript、Rust、CLI、MCP |
 | [IOP](https://github.com/EnvFoundry/IOP) | 仪器操作、持久实验、物理工作条件、带单位读数和关联不确定度。 | Python、TypeScript、CLI、HTTP、MCP |
-| [光学与光子学实验室](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | 光学软件与独立接入包、求解器环境、科学计算程序、可接续的参数研究和结果分析。 | Python、TypeScript、CLI、MCP |
+| [光学与光子学实验室](https://github.com/EnvFoundry/Optics-Photonics-AI-Lab) | 开源研究任务与软件、按任务关联的方法与程序、可接续的参数研究及可选外部接入。 | Python、TypeScript、CLI、MCP |
 | [Data Engineering](https://github.com/EnvFoundry/Data-Engineering) | 数据版本、来源关系与划分、预算约束下的混合、索引分片和可恢复读取。 | Python、CLI、MCP |
 | [Verifiable Agent Gym](https://github.com/EnvFoundry/Verifiable-Agent-Gym) | 任务包、批量环境交互、独立结果评价和分组轨迹导出。 | Python、CLI、MCP、JSON 进程协议 |
 | [AI Evaluation](https://github.com/EnvFoundry/AI-Evaluation) | 基准执行、分组统计比较、评审校准和外部结果导入。 | Python、CLI、MCP、JSON 进程协议 |
